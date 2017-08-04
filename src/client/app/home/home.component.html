@@ -1,0 +1,50 @@
+<style>
+  .example-h2 {
+    margin: 10px;
+  }
+
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+  .example-margin {
+    margin: 10px;
+  }
+</style>
+<p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
+
+<form (submit)="addName()">
+  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
+  <button md-button type="submit">
+    NEW BUTTON
+  </button>
+</form>
+
+<ul>
+  <li *ngFor="let name of names">{{ name }}</li>
+</ul>
+
+<md-card class="result">
+  <md-card-content>
+    <h2 class="example-h2">Result</h2>
+
+    <section class="example-section">
+      <md-slide-toggle
+        class="example-margin"
+        [color]="red"
+        [checked]="true"
+        [disabled]="false">
+        Slide me!
+      </md-slide-toggle>
+    </section>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <button md-raised-button color="primary" id="getCaptcha">Add Vehicle</button>
+</md-card>
+
+
